@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 8</title>
+  <style>
+    #login {
+      margin: auto;
+      width: min-content;
+      display: grid;
+      grid-template-areas: "title title"
+        "user-label user-input"
+        "pass-label pass-input"
+        ". submit-input";
+    }
+
+    #login h3 {
+      grid-area: title;
+      text-align: center;
+    }
+
+    #login label[for="user"] {
+      grid-area: user-label;
+    }
+
+    #login input[name="user"] {
+      grid-area: user-input;
+    }
+
+    #login label[for="password"] {
+      grid-area: pass-label;
+    }
+
+    #login input[name="password"] {
+      grid-area: pass-input;
+    }
+
+    #login input[type="submit"] {
+      grid-area: submit-input;
+    }
+
+    #login input[name="user"],
+    #login input[name="password"] {
+      width: 9em;
+      margin: 1px 0;
+    }
+
+    #login input[type="submit"] {
+      width: min-content;
+      margin-top: 1.5em;
+
+    }
+  </style>
+</head>
+
+<body>
+  <form id="login">
+    <h3>Ingreso al Sistema</h3>
+    <label for="user">Usuario:</label>
+    <input type="text" name="user" id="user">
+    <label for="password">Clave:</label>
+    <input type="password" name="password" id="password">
+    <input type="submit" value="Ingresar">
+  </form>
+  <script src="./control.js"></script>
+</body>
+
+</html>
